@@ -1,0 +1,23 @@
+[
+    {
+    "ID":"FirstName",
+    "Label":"FirstName",
+    "Type":"input",
+    "Value":"",
+    "Required":true
+},
+{
+    "ID":"LastName",
+    "Label":"LastName",
+    "Type":"input",
+    "Value":"",
+    "Required":true
+},
+{
+    "ID":"PhoneNumber",
+    "Label":"PhoneNumber",
+    "Type":"input",
+    "Value":"",
+    "Required":true
+}
+]

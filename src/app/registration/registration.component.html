@@ -1,0 +1,40 @@
+
+   <div class=" header color">
+       <h1>Registration Form</h1>
+   </div>
+   <section>
+       <div class="col-md-12">{{registrationForm.value | json}}</div>
+       <form id="form" [formGroup]="registrationForm">
+           <div class="row form">
+               <div class="col-md-12" *ngFor="let control of dynamicFormArray">
+                   <div [ngSwitch]=control.Type>
+                    <div *ngSwitchCase="'input'">
+                        <div class="col-md-4">
+                         <label>{{control.label}}</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text"  [formControlName]="control.ID" class="form-control">
+                           
+                            <div *ngIf="registrationForm.get(control.ID).dirty || registrationForm.get(control.ID).touched">
+                                <small *ngIf="!registrationForm.get(control.ID).valid">
+                                    {{control.label}}Form is Invaild
+                                     
+                                </small>
+                                
+                               
+                                <!-- <router-outlet></router-outlet> -->
+                            <!-- </div> -->
+                        </div>
+                         
+                     </div> 
+                   </div>
+               </div>
+           </div>
+           <button type="submit" class="btn btn-primary">Submit</button>
+           </div> 
+           
+        </form> 
+   </section>
+   
+  
+ 
